@@ -11,7 +11,6 @@ if not os.path.exists('uploads'):
 
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
 
-CORS(app, origins='*', supports_credentials=True, methods=['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], allow_headers=['Content-Type', 'Authorization'])
 
 @app.route('/uploads/<path:filename>')
 def uploaded_file(filename):
